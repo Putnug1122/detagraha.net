@@ -55,12 +55,12 @@ export const metadata: Metadata = {
     template: "%s | Putra Nugraha",
   },
   description:
-    "Christian IT Administrator working for Rising Sun Pictures. Building better artist experiences by day, Web Developer by night.",
+    "A software engineer and student at Polstat STIS. Computer provision by day, building random stuff by night",
   openGraph: {
     url: siteConfig.url,
     title: "Putra Nugraha",
     description:
-      "Christian IT Administrator working for Rising Sun Pictures. Building better artist experiences by day, Web Developer by night.",
+      "A software engineer and student at Polstat STIS. Computer provision by day, building random stuff by night",
     images: [
       {
         url: "https://og.sznm.dev/api/generate?heading=detagraha&text=https://detagraha.net", // to be replaced with own generator

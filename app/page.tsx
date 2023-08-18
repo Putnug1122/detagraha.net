@@ -32,7 +32,7 @@ export default async function Home() {
         <div>
           <div className="space-y-4">
             <p>
-              I&apos;m Deta, a software engineer student at{" "}
+              I&apos;m Deta, a software engineer and student at{" "}
               <span className="underline hover:no-underline cursor-pointer">
                 <HoverCard>
                   <HoverCardTrigger asChild>
