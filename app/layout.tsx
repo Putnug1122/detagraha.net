@@ -92,6 +92,11 @@ export default function RootLayout({
               <Toaster />
             </div>
           </ThemeProvider>
+          <script
+            async
+            src="https://umami.detagraha.net/script.js"
+            data-website-id="20a54dd8-4289-4dfe-bf5d-15496cd2f5d0"
+          ></script>
         </body>
       </html>
     </ClerkProvider>
