@@ -2,6 +2,8 @@ import StarterKit from "@tiptap/starter-kit";
 import Placeholder from "@tiptap/extension-placeholder";
 import Image from "@tiptap/extension-image";
 import SlashCommand from "./slash-command";
+import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
+import { lowlight } from "lowlight/lib/core";
 
 export const TipTapEditorExtensions = [
   StarterKit.configure({
@@ -57,5 +59,9 @@ export const TipTapEditorExtensions = [
     HTMLAttributes: {
       class: "rounded-md shadow-2xl",
     },
+  }),
+  CodeBlockLowlight.configure({
+    lowlight,
+    defaultLanguage: "javascript",
   }),
 ];

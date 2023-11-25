@@ -7,6 +7,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 import Navigation from "@/components/navigation";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -83,7 +85,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${inter.className} dark:bg-[#171717]`}>
+        <body
+          className={`${GeistSans.variable} ${GeistMono.variable} font-sans antialiased bg-[#fafafa] dark:bg-[#0a0a0a]`}
+        >
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <Navigation />
             <div className="flex flex-col min-h-screen justify-between space-y-4 container">

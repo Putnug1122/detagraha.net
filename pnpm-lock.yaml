@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -101,6 +101,9 @@ dependencies:
   '@tiptap/core':
     specifier: ^2.0.4
     version: 2.0.4(@tiptap/pm@2.0.4)
+  '@tiptap/extension-code-block-lowlight':
+    specifier: ^2.1.6
+    version: 2.1.6(@tiptap/core@2.0.4)(@tiptap/extension-code-block@2.1.6)(@tiptap/pm@2.0.4)
   '@tiptap/extension-image':
     specifier: ^2.0.4
     version: 2.0.4(@tiptap/core@2.0.4)
@@ -158,6 +161,12 @@ dependencies:
   framer-motion:
     specifier: ^10.15.0
     version: 10.15.0(react-dom@18.2.0)(react@18.2.0)
+  geist:
+    specifier: ^1.1.0
+    version: 1.1.0(next@13.4.12)
+  lowlight:
+    specifier: ^2.9.0
+    version: 2.9.0
   lucide-react:
     specifier: ^0.264.0
     version: 0.264.0(react@18.2.0)
@@ -329,6 +338,7 @@ packages:
 
   /@emotion/memoize@0.7.4:
     resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -2153,8 +2163,20 @@ packages:
       '@tiptap/core': 2.0.4(@tiptap/pm@2.0.4)
     dev: false
 
-  /@tiptap/extension-code-block@2.0.4(@tiptap/core@2.0.4)(@tiptap/pm@2.0.4):
-    resolution: {integrity: sha512-In2tV3rgm/MznVF0N7qYsYugPWSzhZHaCRCWcFKNvllMExpo91bUWvk+hXaIhhPxvuqGIVezjybwrYuU3bJW0g==}
+  /@tiptap/extension-code-block-lowlight@2.1.6(@tiptap/core@2.0.4)(@tiptap/extension-code-block@2.1.6)(@tiptap/pm@2.0.4):
+    resolution: {integrity: sha512-ausesYzwJcyatMVd7BTBT82eXZc7RxWf5I6VcaYjAZ3MJi67PvynATJ0AkMcEA9kIvC2wz/Qc39cfI5nKHQ5Wg==}
+    peerDependencies:
+      '@tiptap/core': ^2.0.0
+      '@tiptap/extension-code-block': ^2.0.0
+      '@tiptap/pm': ^2.0.0
+    dependencies:
+      '@tiptap/core': 2.0.4(@tiptap/pm@2.0.4)
+      '@tiptap/extension-code-block': 2.1.6(@tiptap/core@2.0.4)(@tiptap/pm@2.0.4)
+      '@tiptap/pm': 2.0.4(@tiptap/core@2.0.4)
+    dev: false
+
+  /@tiptap/extension-code-block@2.1.6(@tiptap/core@2.0.4)(@tiptap/pm@2.0.4):
+    resolution: {integrity: sha512-tLK9YeHYz03qeG4Sy5uZMq6v5uo34315I4WrfIAujesDloG1v8nd+D9I8A7PD4BWHZOzv13ToVeDYpLYDdvE7Q==}
     peerDependencies:
       '@tiptap/core': ^2.0.0
       '@tiptap/pm': ^2.0.0
@@ -2373,7 +2395,7 @@ packages:
       '@tiptap/extension-bold': 2.0.4(@tiptap/core@2.0.4)
       '@tiptap/extension-bullet-list': 2.0.4(@tiptap/core@2.0.4)
       '@tiptap/extension-code': 2.0.4(@tiptap/core@2.0.4)
-      '@tiptap/extension-code-block': 2.0.4(@tiptap/core@2.0.4)(@tiptap/pm@2.0.4)
+      '@tiptap/extension-code-block': 2.1.6(@tiptap/core@2.0.4)(@tiptap/pm@2.0.4)
       '@tiptap/extension-document': 2.0.4(@tiptap/core@2.0.4)
       '@tiptap/extension-dropcursor': 2.0.4(@tiptap/core@2.0.4)(@tiptap/pm@2.0.4)
       '@tiptap/extension-gapcursor': 2.0.4(@tiptap/core@2.0.4)(@tiptap/pm@2.0.4)
@@ -3700,6 +3722,12 @@ packages:
     dependencies:
       reusify: 1.0.4
 
+  /fault@2.0.1:
+    resolution: {integrity: sha512-WtySTkS4OKev5JtpHXnib4Gxiurzh5NCGvWrFaZ34m6JehfTUhKZvn9njTfw48t6JumVQOmrKqpmGcdwxnhqBQ==}
+    dependencies:
+      format: 0.2.2
+    dev: false
+
   /file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -3746,6 +3774,11 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
+    dev: false
+
+  /format@0.2.2:
+    resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
+    engines: {node: '>=0.4.x'}
     dev: false
 
   /fraction.js@4.2.0:
@@ -3795,6 +3828,14 @@ packages:
 
   /functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
+    dev: false
+
+  /geist@1.1.0(next@13.4.12):
+    resolution: {integrity: sha512-UwZH+ekwAt1T5XYlviFD+jUXFeRRawDDT8RtpJ//IHTPXlVIO6BCcZ8M0Pxg1K/FT3H8HLn3KJqMsPLHbo1HNg==}
+    peerDependencies:
+      next: ^13.2 || ^14
+    dependencies:
+      next: 13.4.12(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /get-intrinsic@1.2.1:
@@ -3991,6 +4032,11 @@ packages:
 
   /hast-util-whitespace@2.0.1:
     resolution: {integrity: sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==}
+    dev: false
+
+  /highlight.js@11.8.0:
+    resolution: {integrity: sha512-MedQhoqVdr0U6SSnWPzfiadUcDHfN/Wzq25AkXiQv9oiOO/sG0S7XkvpFIqWBl9Yq1UYyYOOVORs5UW2XlPyzg==}
+    engines: {node: '>=12.0.0'}
     dev: false
 
   /human-signals@2.1.0:
@@ -4379,6 +4425,14 @@ packages:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
       tslib: 2.4.1
+    dev: false
+
+  /lowlight@2.9.0:
+    resolution: {integrity: sha512-OpcaUTCLmHuVuBcyNckKfH5B0oA4JUavb/M/8n9iAvanJYNQkrVm4pvyX0SUaqkBG4dnWHKt7p50B3ngAG2Rfw==}
+    dependencies:
+      '@types/hast': 2.3.5
+      fault: 2.0.1
+      highlight.js: 11.8.0
     dev: false
 
   /lru-cache@6.0.0:
